@@ -2,8 +2,10 @@ import 'package:colecionismo/routes.dart';
 import 'package:colecionismo/theme.dart';
 import 'package:colecionismo/util.dart';
 import 'package:flutter/material.dart';
+import 'package:platform_plus/platform_plus.dart';
 
-void main() {
+Future<void> main() async {
+  await PlatformPlus.platform.init();
   runApp(const Colecionismo());
 }
 

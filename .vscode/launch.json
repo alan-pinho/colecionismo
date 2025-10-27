@@ -5,21 +5,18 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "colecionismo",
-      "request": "launch",
-      "type": "dart"
-    },
-    {
-      "name": "colecionismo (profile mode)",
+      "name": "colecionismo (homo)",
       "request": "launch",
       "type": "dart",
-      "flutterMode": "profile"
+      "flutterMode": "debug",
+      "args": ["flavor", "--homo"]
     },
     {
-      "name": "colecionismo (release mode)",
+      "name": "colecionismo (prod)",
       "request": "launch",
       "type": "dart",
-      "flutterMode": "release"
+      "flutterMode": "debug",
+      "args": ["flavor", "--prod"]
     }
   ]
 }

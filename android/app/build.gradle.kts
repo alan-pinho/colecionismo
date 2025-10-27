@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.colecionismo"
+    namespace = "br.com.colecionismo"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -20,9 +20,7 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.colecionismo"
-        // You can update the following values to match your application needs.
+        applicationId = "br.com.colecionismo"
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
@@ -35,6 +33,20 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+
+    flavorDimensions +="app"
+
+    productFlavors {
+        create("homo") {
+            dimension = "app"
+            applicationIdSuffix = ".homo"
+            versionNameSuffix = "--homo"
+        }
+        create("prod") {
+            dimension = "app"
+            versionNameSuffix = "--prod"
         }
     }
 }
